@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 class Callback extends Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.HandleAuthentication();
   }
 

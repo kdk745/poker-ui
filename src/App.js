@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id={"app"}>
         <h1>Poker App</h1>
         <Router history={history}>
           <div>

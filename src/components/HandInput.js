@@ -9,7 +9,7 @@ class HandComponent extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.IsAuthenticated();
   }
 
@@ -42,7 +42,7 @@ class HandComponent extends React.Component {
     return (
       <div>
         <div>
-          <p>Input Hand Below</p>
+          <p>Input Cards Below</p>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.state.hand.length === 5) {
@@ -52,7 +52,7 @@ class HandComponent extends React.Component {
             }
           }}>
             <div>
-              Cards: <input maxLength="14" onChange={(e) => {
+              <input maxLength="14" onChange={(e) => {
                 const input = e.target.value;
                 this.updateCards(input);
               }} />

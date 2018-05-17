@@ -11,12 +11,13 @@ class Home extends Component {
 
   componentWillMount() {
     this.props.Authenticated();
-  }
-
-  render() {
     if (this.props.loggedIn) {
       history.replace("/app");
     }
+  }
+
+  render() {
+
     return (
       <div>
         <p>Welcome </p>
