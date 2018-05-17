@@ -22,11 +22,10 @@
   "scripts": {
     "start": "nf start",
     "lint": "eslint src",
-    "react-app": "react-scripts start",
-    "api": "json-server --id _id --watch --port 4001 db.json",
+    "react-app": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "npm run lint && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:4001"
+  "proxy": "http://localhost:8080"
 }

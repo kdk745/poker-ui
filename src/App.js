@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import ContactsContainer from "./containers/ContactsContainer";
-import ProductsContainer from "./containers/ProductsContainer";
-import VehiclesContainer from "./containers/VehiclesContainer";
-import CommentsContainer from "./containers/CommentsContainer";
-import CreateThingsContainer from "./containers/CreateThingsContainer";
+import HandInput from "./containers/HandInputCont";
+import LastHand from "./containers/LastHandCont";
+
 class App extends Component {
   constructor() {
     super();
@@ -16,23 +14,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style={{float: "left", width: "49%"}}>
-          <h1>Contacts</h1>
-          <ContactsContainer />
-          <h1>Products</h1>
-          <ProductsContainer />
-          <h1>Vehicles</h1>
-          <VehiclesContainer />
-          <h1>Comments </h1>
-          <CommentsContainer />
-        </div>
-        <div style={{float: "left", width: "49%"}}>
-          <CreateThingsContainer />
-        </div>
+        <h1>Poker App</h1>
+        <HandInput />
+        <LastHand />
       </div>
     );
   }
 }
 export default (App);
-
-
