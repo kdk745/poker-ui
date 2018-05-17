@@ -15,7 +15,6 @@
 * returns the appropriate value based on action types
 
 ### Containers
-* In AppContainer.js
 * Imports connect
 * Import actions corresponding to appropriate functions and state items
 * mapDispatchToProps for functions
