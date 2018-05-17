@@ -2,23 +2,42 @@ import React, { Component } from "react";
 import "./App.css";
 import HandInput from "./containers/HandInputCont";
 import LastHand from "./containers/LastHandCont";
-
+import Home from "./containers/HomeCont";
+import Callback from "./containers/CallbackCont";
+import {
+  Router,
+  Route
+} from "react-router-dom";
+import history from "./history";
 class App extends Component {
   constructor() {
     super();
     this.state = {users: []};
   }
-  componentDidMount() {
 
-  }
-  render() {
+  app() {
     return (
       <div>
-        <h1>Poker App</h1>
         <HandInput />
         <LastHand />
       </div>
     );
   }
+
+  render() {
+    return (
+      <div>
+        <h1>Poker App</h1>
+        <Router history={history}>
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route path="/callback" component={Callback} />
+            <Route path="/app" component={this.app} />
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
+
 export default (App);

@@ -5,6 +5,8 @@ import {
   triggerInputError
 } from "../actions";
 
+import Auth from "../auth/";
+const auth = new Auth();
 function mapDispatchToProps(dispatch) {
   return {
     ProcessHand: (hand) => {
@@ -12,6 +14,12 @@ function mapDispatchToProps(dispatch) {
     },
     TriggerInputError: () => {
       dispatch(triggerInputError());
+    },
+    IsAuthenticated: () => {
+      dispatch(auth.isAuthenticated());
+    },
+    Logout: () => {
+      dispatch(auth.logout());
     }
   };
 }

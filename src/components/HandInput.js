@@ -9,6 +9,10 @@ class HandComponent extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.IsAuthenticated();
+  }
+
   isLength(card) {
     return card.length === 2;
   }
@@ -29,6 +33,9 @@ class HandComponent extends React.Component {
     }
   }
 
+  logout() {
+    this.props.Logout();
+  }
 
   render() {
     const error = this.props.inputError === true ? "please fix input" : "";
@@ -52,6 +59,9 @@ class HandComponent extends React.Component {
             </div>
             <button>Process</button>
           </form>
+          <button onClick={this.logout.bind(this)} >
+            Logout
+          </button>
           <p>{error}</p>
         </div>
       </div>
@@ -61,6 +71,8 @@ class HandComponent extends React.Component {
 HandComponent.propTypes = {
   ProcessHand: PropTypes.func.isRequired,
   TriggerInputError: PropTypes.func.isRequired,
-  inputError: PropTypes.bool.isRequired
+  inputError: PropTypes.bool.isRequired,
+  IsAuthenticated: PropTypes.func.isRequired,
+  Logout: PropTypes.func.isRequired
 };
 export default HandComponent;

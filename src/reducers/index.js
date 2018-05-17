@@ -15,8 +15,21 @@ function inputError(state = false, action) {
   }
   return state;
 }
+
+function loggedIn(state = false, action) {
+  if (action.type === "LOGGED_IN") {
+    return true;
+  } else if (action.type === "LOGGED_IN_FAIL") {
+    return false;
+  } else if (action.type === "LOG_OUT") {
+    return false;
+  }
+  return state;
+}
+
 const rootReducer = combineReducers({
   hand,
-  inputError
+  inputError,
+  loggedIn
 });
 export default rootReducer;
