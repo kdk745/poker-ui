@@ -21,7 +21,7 @@ class Home extends Component {
     return (
       <div>
         <p>Welcome </p>
-        <button onClick={this.login.bind(this)} >
+        <button className="normal" onClick={this.login.bind(this)} >
           Login
         </button>
       </div>

@@ -14,7 +14,7 @@ class Callback extends Component {
     return (
       <div>
         <Link to={"/"}>
-          <button>
+          <button className="normal">
             Go to Login
           </button>
         </Link>

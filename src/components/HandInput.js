@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import CardSelector from "../containers/CardSelectorCont";
 
 class HandComponent extends React.Component {
   constructor() {
@@ -33,6 +34,17 @@ class HandComponent extends React.Component {
     }
   }
 
+  addCard(card) {
+    let value = document.getElementById("cardInput").value;
+    if (value === "") {
+      value = card;
+    } else {
+      value += ` ${card}`;
+    }
+    document.getElementById("cardInput").value = value;
+    this.updateCards(value);
+  }
+
   logout() {
     this.props.Logout();
   }
@@ -48,6 +60,7 @@ class HandComponent extends React.Component {
               {"As 4h 3d 5c 2c"}
             </span>
           </div>
+          <CardSelector AddCard={(card) => this.addCard(card)} />
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.state.hand.length === 5) {
@@ -57,14 +70,14 @@ class HandComponent extends React.Component {
             }
           }}>
             <div>
-              <input maxLength="14" onChange={(e) => {
+              <input id="cardInput" maxLength="14" onChange={(e) => {
                 const input = e.target.value;
                 this.updateCards(input);
               }} />
             </div>
-            <button>Process</button>
+            <button className="normal">Process</button>
           </form>
-          <button onClick={this.logout.bind(this)} >
+          <button className="normal" onClick={this.logout.bind(this)} >
             Logout
           </button>
           <p>{error}</p>

@@ -27,9 +27,17 @@ function loggedIn(state = false, action) {
   return state;
 }
 
+function cardsUnicode(state = {}, action) {
+  if (action.type === "LOAD_CARDS") {
+    return action.value;
+  }
+  return state;
+}
+
 const rootReducer = combineReducers({
   hand,
   inputError,
-  loggedIn
+  loggedIn,
+  cardsUnicode
 });
 export default rootReducer;

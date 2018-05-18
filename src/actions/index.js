@@ -1,3 +1,12 @@
+export const LOAD_CARDS = "LOAD_CARDS";
+
+export function loadCards(cards) {
+  return {
+    type: LOAD_CARDS,
+    value: cards
+  };
+}
+
 export const PROCESS_HAND = "PROCESS_HAND";
 
 export function processHand(hand) {
