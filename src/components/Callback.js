@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 
 class Callback extends Component {
@@ -12,7 +13,11 @@ class Callback extends Component {
   render() {
     return (
       <div>
-        <p>Logging You In</p>
+        <Link to={"/"}>
+          <button>
+            Go to Login
+          </button>
+        </Link>
       </div>
     );
   }

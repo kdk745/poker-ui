@@ -43,6 +43,11 @@ class HandComponent extends React.Component {
       <div>
         <div>
           <p>Input Cards Below</p>
+          <div className={"tooltip"}>See example
+            <span className={"tooltiptext"}>
+              {"As 4h 3d 5c 2c"}
+            </span>
+          </div>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.state.hand.length === 5) {

@@ -26,8 +26,8 @@ class App extends Component {
 
   render() {
     return (
-      <div id={"app"}>
-        <h1>Poker App</h1>
+      <div className={"app"}>
+        <p className={"title"}>Poker Hand App</p>
         <Router history={history}>
           <div>
             <Route exact path="/" component={Home} />

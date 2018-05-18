@@ -1,14 +1,24 @@
 button {
   width: 10em;
-  height: 2em;
-  margin: 2%;
-  background: #8ca3a3;
-  color: white
+  height: 3em;
+  margin: 3%;
+  background: #c0c0c0;
+  color: white;
+  font-size: 90%
 }
 
-#app {
-  width: 200px;
-  height: 100px;
+button:hover {
+  background: #5f5f5f;
+  transition: 0.3s;
+}
+
+input {
+  width: 80%;
+  height: 20px;
+}
+
+.app {
+  width: 500px;
   position: absolute;
   top:0;
   bottom: 75%;
@@ -16,5 +26,54 @@ button {
   right: 0;
   margin: auto;
   text-align: center;
-  font-family: "Avenir Next"
+  font-family: "Avenir Next";
+  background-color: #f0f0f0;
+}
+
+.app > div {
+  background-color: #f0f0f0;
+  padding: 15px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.title {
+  font-size: 2em
 }
