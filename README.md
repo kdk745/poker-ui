@@ -5,6 +5,9 @@
 ### Uses local api running on SpringBoot
 * http://localhost:8080/cards
 
+### Security
+* Protected with Auth0
+
 ### Actions in actions/index.js to retrieve data
 * processHand(hand)
     * returns a thunk function
