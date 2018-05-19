@@ -54,3 +54,11 @@ export function triggerInputError() {
     type: INPUT_ERROR
   };
 }
+
+export const RESET_HAND = "RESET_HAND";
+
+export function resetHand() {
+  return {
+    type: RESET_HAND
+  };
+}

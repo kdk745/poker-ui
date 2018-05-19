@@ -85,6 +85,7 @@ export default class Auth {
         dispatch({
           type: "LOGGED_IN"
         });
+        history.replace("/app");
         return true;
       }
       dispatch({

@@ -49,11 +49,22 @@ class HandComponent extends React.Component {
     this.props.Logout();
   }
 
+  reset() {
+    document.getElementById("cardInput").value = "";
+    this.props.ResetHand();
+    this.setState({
+      hand: ""
+    });
+  }
+
   render() {
     const error = this.props.inputError === true ? "please fix input" : "";
     return (
       <div>
         <div>
+          <button className="normal" onClick={this.logout.bind(this)} >
+            Logout
+          </button>
           <p>Input Cards Below</p>
           <div className={"tooltip"}>See example
             <span className={"tooltiptext"}>
@@ -74,12 +85,10 @@ class HandComponent extends React.Component {
                 const input = e.target.value;
                 this.updateCards(input);
               }} />
+              <button className="normal" onClick={() => {console.log("submit");}}>Process</button>
             </div>
-            <button className="normal">Process</button>
           </form>
-          <button className="normal" onClick={this.logout.bind(this)} >
-            Logout
-          </button>
+          <button className="normal" onClick={() => this.reset()}>Reset</button>
           <p>{error}</p>
         </div>
       </div>
@@ -91,6 +100,7 @@ HandComponent.propTypes = {
   TriggerInputError: PropTypes.func.isRequired,
   inputError: PropTypes.bool.isRequired,
   IsAuthenticated: PropTypes.func.isRequired,
-  Logout: PropTypes.func.isRequired
+  Logout: PropTypes.func.isRequired,
+  ResetHand: PropTypes.func.isRequired
 };
 export default HandComponent;

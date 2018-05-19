@@ -2,7 +2,8 @@ import { connect } from "react-redux";
 import HandInput from "../components/HandInput";
 import {
   processHand,
-  triggerInputError
+  triggerInputError,
+  resetHand
 } from "../actions";
 
 import Auth from "../auth/";
@@ -20,6 +21,9 @@ function mapDispatchToProps(dispatch) {
     },
     Logout: () => {
       dispatch(auth.logout());
+    },
+    ResetHand: () => {
+      dispatch(resetHand());
     }
   };
 }
