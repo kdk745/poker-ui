@@ -15,7 +15,7 @@ class Callback extends Component {
       <div>
         <Link to={"/"}>
           <button className="normal">
-            Go to Login
+            Home
           </button>
         </Link>
       </div>
