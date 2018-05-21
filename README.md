@@ -1,9 +1,8 @@
-### Setup
-* Fork, Clone locally
-* yarn install, yarn start in terminal
+### App currently deployed to Surge.sh
+* https://windy-border.surge.sh/
 
-### Uses local api running on SpringBoot
-* http://localhost:8080/cards
+### Uses SpringBoot api deployed to heroku
+* https://serene-cove-82707.herokuapp.com
 
 ### Security
 * Protected with Auth0
