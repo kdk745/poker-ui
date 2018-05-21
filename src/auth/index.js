@@ -13,7 +13,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: "kdk745.auth0.com",
     clientID: "9zFlmffsOsgq3tNgnGHyhQ71HH68wdv0",
-    redirectUri: "http://localhost:3001/callback",
+    redirectUri: "http://windy-border.surge.sh:80/callback",
     audience: "https://kdk745.auth0.com/userinfo",
     responseType: "token id_token",
     scope: "openid"

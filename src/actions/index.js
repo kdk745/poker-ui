@@ -15,10 +15,11 @@ export function processHand(hand) {
   };
   return (dispatch) => {
     // request triggers hand processing
-    fetch("/cards", {
+    fetch("https://serene-cove-82707.herokuapp.com/cards", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(reqBody)
+      body: JSON.stringify(reqBody),
+      mode: "cors"
     }).then((res) => {
       return res.text();
     }).then((data) => {
