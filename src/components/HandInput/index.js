@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CardSelector from "../containers/CardSelectorCont";
+import CardSelector from "../../containers/CardSelectorCont";
 
 class HandComponent extends React.Component {
   constructor() {
