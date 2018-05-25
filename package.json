@@ -4,10 +4,15 @@
   "private": true,
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "babel-jest": "^22.4.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^3.14.0",
     "eslint-plugin-babel": "^4.0.1",
     "eslint-plugin-react": "^6.9.0",
+    "jest": "^22.4.4",
     "react-scripts": "0.7.0",
+    "react-test-renderer": "^16.3.2",
     "surge": "^0.20.1"
   },
   "dependencies": {
@@ -27,9 +32,9 @@
   "scripts": {
     "start": "nf start",
     "lint": "eslint src",
-    "react-app": "react-scripts start",
+    "react-app": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
-    "test": "npm run lint && react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "deploy": "npm run build && mv build/index.html build/200.html && surge build https://windy-border.surge.sh"
   },

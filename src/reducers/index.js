@@ -3,6 +3,8 @@ import {combineReducers} from "redux";
 function hand(state = "", action) {
   if (action.type === "PROCESS_HAND_SUCCESS") {
     return action.value;
+  } else if (action.type === "PROCESSING") {
+    return action.value;
   } else if (action.type === "RESET_HAND") {
     return "";
   }

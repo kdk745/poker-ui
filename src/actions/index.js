@@ -14,6 +14,7 @@ export function processHand(hand) {
     hand
   };
   return (dispatch) => {
+    dispatch(processing());
     // request triggers hand processing
     fetch("https://serene-cove-82707.herokuapp.com/cards", {
       method: "POST",
@@ -28,6 +29,15 @@ export function processHand(hand) {
     dispatch({
       type: PROCESS_HAND
     });
+  };
+}
+
+export const PROCESSING = "PROCESSING";
+
+export function processing() {
+  return {
+    type: PROCESSING,
+    value: "Processing Hand..."
   };
 }
 

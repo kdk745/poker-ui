@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import PropTypes from "prop-types";
-import history from "../history";
+import history from "../../history";
 
 class Home extends Component {
 
